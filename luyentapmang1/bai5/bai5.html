@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<script src="bai5.js"></script>-->
+<h2>Mảng trước và sau khi đảo ngược</h2>
+
+<p id="mangTruoc"></p>
+<p id="mangSau"></p>
+
+<button onclick="daoNguocMang()">Đảo Ngược Mảng</button>
+
+<script>
+    function daoNguocMang() {
+        let mangSoNguyen = [1, 2, 3, 4, 5];
+        let mangDaoNguoc = [];
+
+        for (let i = mangSoNguyen.length - 1; i >= 0; i--) {
+            mangDaoNguoc.push(mangSoNguyen[i]);
+        }
+
+        // Hiển thị mảng trước và sau khi đảo ngược
+        document.getElementById("mangTruoc").innerHTML = "Mảng trước khi đảo ngược: " + mangSoNguyen.join(', ');
+        document.getElementById("mangSau").innerHTML = "Mảng sau khi đảo ngược: " + mangDaoNguoc.join(', ');
+    }
+</script>
+</body>
+</html>
